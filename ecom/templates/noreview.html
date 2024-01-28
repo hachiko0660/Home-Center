@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container" style="background-image: linear-gradient(to right, #1F1C2C 0%, #928DAB  51%, #1F1C2C  100%);">
+          <a class="navbar-brand" href="#" style="font-size:35px;color:darkgrey;">
+            homecenter <img src="{% static 'home.jpg' %}" alt="" width="30" height="30" class="d-inline-block align-text-right"></a>
+<input type="text" id="myFilter" style="width:350px;margin-left:200px;" onkeyup="myFunction()" placeholder="search  by title..">
+
+            <a href="http://127.0.0.1:8000/ecom/proj/"><button  style="border-color: rgb(237, 237, 237);border-radius:7px;background-image:linear-gradient(to right, #CC95C0 0%, #DBD4B4  51%, #CC95C0  100%);">Home</button></a>
+            <a href="http://127.0.0.1:8000/ecom/about/"><button  style="border-color: rgb(237, 237, 237);border-radius:7px;background-image:linear-gradient(to right, #CC95C0 0%, #DBD4B4  51%, #CC95C0  100%);">About</button></a>
+            <a href="http://127.0.0.1:8000/ecom/logout/"><button  style="border-color: rgb(237, 237, 237);border-radius:7px;background-image:linear-gradient(to right, #CC95C0 0%, #DBD4B4  51%, #CC95C0  100%);">Logout</button></a>
+        </div>
+      </nav><br>
+<div align="center" style="margin-top:100px;">
+ <h1 >Watch Review</h1>
+    <h2>No Review yet...</h2>
+           <a href="http://127.0.0.1:8000/ecom/reviewcom/"><button style="background-color:black;color:white;">Add Review</button></a>
+
+</div>
+
+</body>
+</html>

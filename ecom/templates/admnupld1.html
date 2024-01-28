@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style=" background-image:linear-gradient(to right, #870000 0%, #190A05  51%, #870000  100%);">
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+<h1>Upload Items</h1>
+<!--    <table>-->
+            <input type="text" name="itemname" placeholder="enter the name of item" style="height:30px;width:400px;"><br><br>
+       <input type="file" name="img" style="height:40px;width:200px;background-color::rgb(193, 188, 186);"><br><br>
+    <input type="number" name="price" placeholder="enter the price" style="height:30px;width:250px;"><br><br>
+  <input type="number" name="prodid1" placeholder="id" style="height:30px;width:150px;" ><br><br>
+
+  <input type="text-area" placeholder="description" name="descript" style="height:30px;width:250px;"><br><br>
+<input type="submit">
+<!--    </table>-->
+</form>
+</body>
+</html>

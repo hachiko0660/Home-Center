@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <div class="container" style="height:300px;width:300px;background-color:green;margin-left:500px;margin-top:100px;">
+<form method="post" align="center">{% csrf_token %}
+<h3 align="center">Card Details</h3>
+      <input type="number" name="credit" style="width:200px;height:30px;" placeholder="credit card number"><br>
+<BR><BR>
+      <input type="number" name="cvv" style="width:100px;height:30px;" placeholder="cvv">&nbsp;&nbsp;&nbsp;
+      <input type="date" name="expdte" placeholder="expire date"><BR><BR>
+    <button type="submit">pay</button>
+  </div>
+</form>
+</body>
+</html>

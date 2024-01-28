@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/9d34d7eb05.js" crossorigin="anonymous"></script>
+<script>
+    function myFunction(){
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('div');
+
+  // Loop through all list items, and hide those who don't match the search query
+
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("h5")[0];      #used for getting the value without the list
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter)>-1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+
+</script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <nav class="nav navbar-light bg-dark">
+    <a class="nav-link" ><i class="fa-solid fa-truck" style="color:white;"></i></a>
+        <a class="nav-link" title="On household order over Rs:40000">FreeShiping.</a>
+  </body>
+    <a class="nav-link" href="#"><i class="fa-solid fa-calendar-days" style="color:white;"></i></a>
+    <a class="nav-link " title="On household order over Rs:30000">EMI Options</a>
+      <form class="d-flex">
+        <a class="navbar-brand" style="color:white;font-size: small;margin-left:550px;" title="Download our apps">Download Our Apps</a>
+        <a class="navbar-brand" style="color:white;font-size: small;">Track Our Furniture</a>
+        <a class="navbar-brand" style="color:white;font-size: small;">Help</a>
+
+      </form>
+  </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container" style="background-image: linear-gradient(to right, #1F1C2C 0%, #928DAB  51%, #1F1C2C  100%);">
+          <a class="navbar-brand" href="#" style="font-size:35px;color:white;">
+            homecenter <img src="{% static 'home.jpg' %}" alt="" width="30" height="30" class="d-inline-block align-text-right"></a>
+
+           <a href="http://127.0.0.1:8000/ecom/regi/" style="margin-left:400px;"><button style="border-color: rgb(237, 237, 237);border-radius:7px;background-image:linear-gradient(to right, #CC95C0 0%, #DBD4B4  51%, #CC95C0  100%);">Register</button> </a>
+            <a href="http://127.0.0.1:8000/ecom/log/"><button  style="border-color: rgb(237, 237, 237);border-radius:7px;background-image:linear-gradient(to right, #CC95C0 0%, #DBD4B4  51%, #CC95C0  100%);">Login</button></a>
+            <a href="http://127.0.0.1:8000/ecom/proj/"><button  style="border-color: rgb(237, 237, 237);border-radius:7px;background-image:linear-gradient(to right, #CC95C0 0%, #DBD4B4  51%, #CC95C0  100%);">Home</button></a>
+            <a href="http://127.0.0.1:8000/ecom/about/"><button  style="border-color: rgb(237, 237, 237);border-radius:7px;background-image:linear-gradient(to right, #CC95C0 0%, #DBD4B4  51%, #CC95C0  100%);">About</button></a>
+            <a href="http://127.0.0.1:8000/ecom/admnpge/"><button  style="border-color: rgb(237, 237, 237);border-radius:7px;background-image:linear-gradient(to right, #CC95C0 0%, #DBD4B4  51%, #CC95C0  100%);">Admin</button></a>
+            <a href="http://127.0.0.1:8000/ecom/logout/"><button  style="border-color: rgb(237, 237, 237);border-radius:7px;background-image:linear-gradient(to right, #CC95C0 0%, #DBD4B4  51%, #CC95C0  100%);">Logout</button></a>
+        </div>
+      </nav>
+<h3>Find More Products...</h3>
+ <div class="container m-5" >
+        <div class="row" >
+            <div class="col-lg-3 col-md-6 col sm-12">
+         <div class="card" style="width:18rem;height:450px;">
+         <img src="{% static 'quadro.jpg' %}" class="card-img-top" alt="..">
+         <div class="card-body" >
+          <h5 class="card-title">Wooden bed</h5>
+          <p class="card-text">.Rs.35980<br> Best selling King size bed</p>
+          <a href="http://127.0.0.1:8000/ecom/log/" class="btn btn-primary" style="text-align:left;">Add to cart</a></div></div></div>
+
+          <div class="col-lg-3 col-md-6 col sm-12">
+         <div class="card" style="width:18rem;height:450px;" >
+         <img src="{% static 'queenbed.jpeg' %}" class="card-img-top" alt="..">
+         <div class="card-body" >
+          <h5 class="card-title">Metal king bed</h5>
+          <p class="card-text">.Rs.25980<br> Best selling bed</p>
+          <a href="http://127.0.0.1:8000/ecom/log/" class="btn btn-primary" style="text-align:left;">Add to cart</a></div></div></div>
+
+               <div class="col-lg-3 col-md-6 col sm-12">
+         <div class="card" style="width:18rem;height:450px;" >
+         <img src="{% static 'polarsbed.jpg' %}" class="card-img-top" alt="..">
+         <div class="card-body" >
+          <h5 class="card-title">Polarsed bed</h5>
+          <p class="card-text">.Rs.27980<br> Best selling bed</p>
+          <a href="http://127.0.0.1:8000/ecom/log/" class="btn btn-primary" style="text-align:left;">Add to cart</a></div></div></div>
+
+ <div class="col-lg-3 col-md-6 col sm-12">
+         <div class="card" style="width:18rem;height:450px;" >
+         <img src="{% static 'metalbed.jpeg' %}" class="card-img-top" alt="..">
+         <div class="card-body" >
+          <h5 class="card-title">Metal bed</h5>
+          <p class="card-text">.Rs.18980<br> Best selling single size bed</p>
+          <a href="http://127.0.0.1:8000/ecom/log/" class="btn btn-primary" style="text-align:left;">Add to cart</a></div></div></div>
+
+             <div class="col-lg-3 col-md-6 col sm-12">
+         <div class="card" style="width:18rem;height:450px;" >
+         <img src="{% static 'bedbook.jpeg' %}" class="card-img-top" alt="..">
+         <div class="card-body" >
+          <h5 class="card-title">Hydro storage bed</h5>
+          <p class="card-text">.Rs.35980<br> Best selling under storage single size bed</p>
+          <a href="http://127.0.0.1:8000/ecom/log/" class="btn btn-primary" style="text-align:left;">Add to cart</a></div></div></div>
+ </div>
+</body>
+</html>

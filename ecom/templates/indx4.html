@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+        <div class="container">
+            <h2 align="center">Customer Payment Details</h2>
+            <div class="row" align="center">
+                <div class="col">
+                    <table border="1" style="">
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            <th>Gender</th>
+                            <th>address</th>
+<!--                          <th>Bank name</th>-->
+<!--                            <th>Branch name</th>-->
+<!--                          <th>Account name</th>-->
+<!--                          <th>account no</th>-->
+                            <th>zip</th>
+<!--                            <th>Exp date</th>-->
+
+                        </tr>
+                            {% for i in a %}
+
+
+                         <tr>
+                            <td>{{i.fname}}</td>
+                            <td>{{i.phn}}</td>
+                             <td>{{i.email}}</td>
+                             <td>{{i.gender}}</td>
+                            <td>{{i.address}}</td>
+<!--                             <td>{{i.bname}}</td>-->
+<!--                            <td>{{i.branme}}</td>-->
+<!--                            <td>{{i.acname}}</td>-->
+<!--                            <td>{{i.acno}}</td>-->
+                             <td>{{i.zip}}</td>
+<!--                             <td>{{i.expdte}}</td>-->
+                        </tr>
+
+                        {% endfor %}
+                    </table>
+                </div>
+
+            </div>
+
+        </div><BR><BR>
+    <a href="http://127.0.0.1:8000/ecom/pay/"><button style="height:50px;width:150px;background-color:pink;margin-left:500px;">Continue Payment</button></a>
+<!--       <h3 align="center" style="color:black;" >Your payment is success...Thank you for your purchase</h3>-->
+<!--<a href="http://127.0.0.1:8000/ecom/proj/"><button  style="height:50px;width:150px;background-color:pink;margin-left:500px;">More Purchase</button></a>-->
+ </div>
+</body>
+</html>

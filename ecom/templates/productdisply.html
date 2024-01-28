@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4456ec25b8.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+<head>
+    <script>
+    function myFunction() {
+  var input, filter, cards, cardContainer, title, i;
+  input = document.getElementById("myFilter");
+  filter = input.value.toUpperCase();
+  cardContainer = document.getElementById("myProducts");
+  cards = cardContainer.getElementsByClassName("card");
+  for (i = 0; i < cards.length; i++) {
+    title = cards[i].querySelector(".card-title");
+    if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+      cards[i].style.display = "";
+    } else {
+      cards[i].style.display = "none";
+    }
+  }
+}
+
+
+    </script>
+    <style>
+        .centered {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  }
+     img:hover{
+        transform: scale(1.2);
+    }
+
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container" style="background-image: linear-gradient(to right, #1F1C2C 0%, #928DAB  51%, #1F1C2C  100%);">
+          <a class="navbar-brand" href="#" style="font-size:35px;color:darkgrey;">
+            homecenter <img src="{% static 'home.jpg' %}" alt="" width="30" height="30" class="d-inline-block align-text-right"></a>
+<input type="text" id="myFilter" style="width:350px;margin-left:80px;" onkeyup="myFunction()" placeholder="search  by title..">
+
+            <a href="http://127.0.0.1:8000/ecom/proj/"><button  style="border-color: rgb(237, 237, 237);border-radius:7px;background-image: linear-gradient(to right, #1F1C2C 0%, #928DAB  51%, #1F1C2C  100%);color:white;">Home</button></a>
+            <a href="http://127.0.0.1:8000/ecom/pro/"><button  style="border-color: rgb(237, 237, 237);border-radius:7px;background-image: linear-gradient(to right, #1F1C2C 0%, #928DAB  51%, #1F1C2C  100%);color:white;">Profile</button></a>
+            <a href="http://127.0.0.1:8000/ecom/logout/"><button  style="border-color: rgb(237, 237, 237);border-radius:7px;background-image: linear-gradient(to right, #1F1C2C 0%, #928DAB  51%, #1F1C2C  100%);color:white;">Logout</button></a>
+            <a href="http://127.0.0.1:8000/ecom/wishview/">  <i class="fa-regular fa-heart fa fa-1x" style="margin-right:30px;color:red;"></i></a>
+            <a href="http://127.0.0.1:8000/ecom/cartview/">  <i class="fa-solid fa-bag-shopping fa fa-1x" style="margin-right:30px;color:black;"></i></a>
+        </div>
+      </nav>
+<br>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'hm3.jpg' %}" class="d-block w-100" alt="..." style="height:400px ;width:100%">
+              <div class="centered" style="font-size:55px;color:rgb(60, 75, 45);">Hearty conversations</div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'hme2.jpg' %}" class="d-block w=100"  style="height:400px ;width:100%">>
+
+              <div class="centered" style="font-size:25px;color:rgb(60, 75, 45);">Set The Stage For Joyfull moments</div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'home4.jpg' %}" class="d-block w-100" alt="..." style="height:400px ;width:100%">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+   <br>
+<h3 style="margin-left:20px;color:green;">Extend Warm Welcomes</h3>
+<div class="row" id="myProducts">
+  {% for i,j,k,l,m,n in a %}
+     {% if i.uid == id %}
+  <div class="col-4">
+  <div class="card" style="width:18rem;height:450px;margin-left:50px">
+   <div class="card-body" style="background-image:linear-gradient(to right, #CC95C0 0%, #DBD4B4  51%, #CC95C0  100%);">
+       <a href="http://127.0.0.1:8000/ecom/singleview/{{i}}"><img src="{% static k %}" class="card-img-top" alt=".." id="a" height="200px" width="90px"></a>
+       <a href="http://127.0.0.1:8000/ecom/wishlist/{{i}}">
+           <i class= "fa-solid fa-heart fa fa-1x"></i></a>
+       <a href="http://127.0.0.1:8000/ecom/cart/{{i}}">
+           <i class="fa-solid fa-bag-shopping fa fa-1x" style="margin-left:200px;"></i></a>
+     <h5 class="card-title" >{{j}}</h5>
+     <p class="card-text" style="align-items:justify;">{{l}}</p>
+     <p class="card-text" style="font-size:13px;">{{m}}</p>
+<!--       <p>{{n}}</p>-->
+   </div>
+  </div>
+  </div>
+    {% endif %}
+    {% endfor %}
+
+</div>
+<BR><BR><BR>
+<div style="width:1000px;height:150px;margin-left:120px;background-color:black;">
+        <p style="color:white;font-size:40px;margin-left:50px;" >CLEARANCE SALE </p>
+ <H6 STYLE="COLOR:WHITE;margin-left:100px;">GET IT WHILE IT LASTS!</H6>
+
+    <div style="width:500px;height:150px;border-left:1px solid white;margin-top:-110px;margin-left:500px;">
+         <a href="http://127.0.0.1:8000/ecom/ofrdsp/"><button style="margin-left:100px;margin-top:60px;width:250px;height:40px;background-color:red;"><b>UNLOCK THE DEALS</b></button></a>
+  </div>
+  </div>
+
+<br>
+    <hr class="solid">
+
+  <div style="height:220px;width:600px;float:right;">
+   <h3>Download our apps</h3>
+   <p style="color:rgb(95, 94, 94);">Shop our products and offers on-the-go</p>
+   <button style="height:70px;width:180px;background-color: black;color:white;">Download on the <i class="fa-brands fa-apple fa fa-2x" style="color:white;">
+   </i>appstore</button> &nbsp;&nbsp;&nbsp<a href="https://www.appcracy.com/app/google-play-store/"><button style="height:70px;width:180px;background-color: black;color:white;">Get it on <i class="fa-brands fa-google-play fa fa-2x" style="color: #e6333c;"></i>
+      Google play</button></a>
+   </div>
+   <div style="height:220px;width:600px;">
+<!--     <form method="POST" >{% csrf_token %}-->
+<h3>Subscribe to our awesome emails</h3>
+<p  style="color:rgb(98, 96, 96);">Get our latest offers and news straight in your inbox.</p>
+         <input type="email" id="z" placeholder="enter your email">
+
+          <button  style="color:white;width:150px;height:40px;background-color:black;" onclick="hello()">Subscribe</button>&nbsp;
+<p id="demo" style="color:black;margin-left:250px;"></p>
+<!--       </a>-->
+<!--         {% for msg in messages %}-->
+<!--         {{msg}}-->
+<!--         {% endfor %}-->
+       <br><br><br>
+<!--     </form>-->
+  </div>
+
+  <div style="height:300px;width:100%;">
+    <hr class="solid"><br>
+  <div class="card" style="width: 10rem;float:left;border-color: white;">
+    <div class="card-body">
+      <h5 class="card-title">Furniture</h5>
+      <h6 class="card-subtitle mb-2 text-muted" style="font-size:15px;font-family:'Times New Roman', Times, serif">
+        Living Furniture<br>
+        Bedroom Furniture<br>
+        Dining Furniture<br>
+        Accent Furniture<br>
+        Computer Desk and Chair<br>
+        Kids Furniture</h6>
+    </div>
+  </div>
+  <div class="card" style="width: 10rem;float:left;border-color: white;">
+    <div class="card-body">
+      <h5 class="card-title">Kitchen</h5>
+      <h6 class="card-subtitle mb-2 text-muted" style="font-size:15px;font-family:'Times New Roman', Times, serif;">
+        Cooking<br>
+        Storage & Containers<br>
+        Kitchenware<br>
+        Kitchen Linen<br>
+        Appliances<br>
+        Serveware</h6>
+
+    </div>
+  </div>
+  <div class="card" style="width: 10rem;float:left;border-color: white;">
+    <div class="card-body">
+      <h5 class="card-title">Dining</h5>
+      <h6 class="card-subtitle mb-2 text-muted" style="font-size:15px;font-family: 'Times New Roman', Times, serif;">
+        Serving<br>
+Crockery<br>
+Dinner sets<br>
+Table Accessories<br>
+Cutlery</h6>
+    </div>
+  </div>
+  <div class="card" style="width: 10rem;float:left;border-color: white;">
+    <div class="card-body">
+      <h5 class="card-title">Decor</h5>
+      <h6 class="card-subtitle mb-2 text-muted" style="font-size:15px;font-family:'Times New Roman', Times, serif">Home Accessories<br>
+        Fragrance<br>
+        Garden<br>
+        Wall Accents<br>
+</h6>
+    </div>
+  </div>
+  <div class="card" style="width: 10rem;float:left;border-color: white;">
+    <div class="card-body">
+      <h5 class="card-title">Furnishing</h5>
+      <h6 class="card-subtitle mb-2 text-muted" style="font-size:15px;font-family:'Times New Roman', Times, serif">
+        Bedding<br>
+        Curtains<br>
+        Cushions<br>
+        Floor Coverings<br>
+        Accessories<br>
+      </h6>
+    </div>
+  </div>
+  <div class="card" style="width: 10rem;float:left;border-color: white;">
+    <div class="card-body">
+      <h5 class="card-title">Kitchen</h5>
+      <h6 class="card-subtitle mb-2 text-muted" style="font-size:15px;font-family: 'Times New Roman', Times, serif;">
+        Cooking<br>
+        Storage & Containers<br>
+        Kitchenware<br>
+        Kitchen Linen<br>
+        Appliances<br>
+        Serveware</h6>
+
+    </div>
+  </div>
+  <div class="card" style="width: 10rem;float:left;border-color: white;">
+    <div class="card-body">
+      <h5 class="card-title">Bath & laundry</h5>
+      <h6 class="card-subtitle mb-2 text-muted" style="font-size: 15px;font-family: 'Times New Roman', Times, serif;">
+        Laundry<br>
+        Bath<br>
+        Accessories</h6>
+    </div>
+  </div>
+
+</div><br>
+<div class="container" style="width:1200px;height:90px;">
+  <div class="card" style="width: 18rem;float:left;border-color: white;">
+    <div class="card-body">
+      <h5 class="card-title" title="call this number"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;Talk To Us</h5>
+      <h6 class="card-subtitle mb-2 text-muted">1800-210-0987
+      </h6>
+</div>
+</div>
+<div class="card" style="width: 18rem;float:left;border-color: white;">
+  <div class="card-body">
+    <h5 class="card-title"><i class="fa-solid fa-question"></i>&nbsp;&nbsp;Help Center</h5>
+    <h6 class="card-subtitle mb-2 text-muted">homecenter.in/help
+    </h6>
+</div>
+</div>
+
+<div class="card" style="width: 18rem;float:left;border-color: white;">
+  <div class="card-body">
+    <h5 class="card-title" ><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;Write Us</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Help@homecenter.in
+    </h6>
+</div>
+</div>
+<div class="card" style="width: 10rem;float:right;border-color: white;">
+  <div class="card-body">
+    <h5 class="card-title"><i class="fa-brands fa-facebook fa fa-1x" ></i>&nbsp;
+      <i class="fa-brands fa-twitter fa fa-1x"></i>&nbsp;
+      <i class="fa-brands fa-instagram fa fa-1x"></i></h5>
+
+</div>
+</div>
+
+</div>
+</body>
+</html>

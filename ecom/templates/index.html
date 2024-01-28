@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+  <form method="post">{% csrf_token %}
+      <h2 align="center">Personal Details</h2>
+    <table border="1" align="center" height="500px" width="400px">
+      <tr>
+          <th>Name</th>
+            <td><input type="text" name="fname"></td>
+        </tr>
+            <th>Phone No</th>
+                <td><input type="nubmer" name="phn"></td></tr>
+        <tr>
+            <th>Address</th>
+        <td><input type="text" name="address"></td></tr>
+        <tr>
+            <th>Gender</th>
+            <td>  <input type="radio" name="gender">female
+        <input type="radio" name="gender">male</td>
+        </tr>
+         <tr>
+            <th>Email</th>
+            <td><input type="email" name="email"></td></tr>
+        <tr>
+<!--        <tr>-->
+<!--            <th>Bank Name</th>-->
+<!--        <td><input type="text" name="bname"></td></tr>-->
+<!--        <tr>-->
+<!--            <th>Branch</th>-->
+<!--        <td><input type="text" name="branme"></td></tr>-->
+        <tr>
+            <th>Zip</th>
+            <td>
+                <input type="number" name="zip">
+            </td>
+        </tr>
+<!--        <tr>-->
+<!--            <th>Account Name</th>-->
+<!--        <td><input type="text" name="acname"></td></tr>-->
+<!--        <tr>-->
+<!--            <th>Account No</th>-->
+<!--        <td>-->
+<!--            <input type="number" name="acno">-->
+<!--        </td></tr>-->
+<!--        <tr>-->
+<!--          <th>Validity</th>-->
+<!--<td>-->
+<!--    <input type="date" name="expdte">-->
+<!--</td>-->
+<!--      </tr>-->
+    </table>
+      <button type="submit" style="margin-left:540px;width:100px;">Continue</button>
+  </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4456ec25b8.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <script>
+    function myFunction() {
+  var input, filter, cards, cardContainer, title, i;
+  input = document.getElementById("myFilter");
+  filter = input.value.toUpperCase();
+  cardContainer = document.getElementById("myProducts");
+  cards = cardContainer.getElementsByClassName("card");
+  for (i = 0; i < cards.length; i++) {
+    title = cards[i].querySelector(".card-title");
+<!--    title = cards[i].querySelector("card-title");-->
+    if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+      cards[i].style.display = "";
+    } else {
+      cards[i].style.display = "none";
+    }
+  }
+}
+
+    </script>
+    <style>
+        h5{
+        margin-left:150px;
+        font-family:'Times New Roman', Times, serif;
+        }
+        function hello() {
+   var a= document.getElementById("z").value
+  document.getElementById("demo").innerHTML = "9086543456";
+}
+a:hover {
+  background-color: yellow;
+
+    </style>
+</head>
+<body>
+<div class="container mt-5" style="background-color:rgb(221, 244, 199);">
+  <h1 style="margin-left:200px;font-family: 'Times New Roman', Times, serif;">Homecenter</h1><br>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light"  style="width:800px;margin-left:200px;">
+      <div class="container" style="background-color:rgb(142, 138, 133);height:30px;">
+          <a href="http://127.0.0.1:8000/ecom/userdsp/"><button style="background-color:rgb(142, 138, 133); height:30px;width:100px;"> Furniture</button></a>
+      <a href=""><button style="background-color:rgb(142, 138, 133); height:30px;width:100px;">Dining</button></a>
+      <a href="http://127.0.0.1:8000/ecom/proj/"><button style="background-color:rgb(142, 138, 133); height:30px;width:100px;">Kitchen</button></a>
+                <a href="http://127.0.0.1:8000/ecom/proj/"><button style="background-color:rgb(142, 138, 133); height:30px;width:100px;">Home</button></a>
+
+          <input type="text" id="myFilter" style="width:200px;margin-left:150px;border-radius:20px;" onkeyup="myFunction()" placeholder="search  by title..">
+              </div>
+  </nav>
+    <div style="float-align:left;height:300px;width:300px;">
+        <div>
+        <h5>Contact us</h5>
+                <a href="" style="margin-left:150px;font-size:15px;color:black;">1234-567-0987</a>
+        </div>
+            <BR>
+<div>
+        <h5>Customer Service</h5>
+    <a href=""  style="margin-left:150px;font-size:15px;color:black;">customercare@gmail.com</a>
+</div>
+</div>
+    <div style="margin-left:350px;margin-top:-300px;height:700px;width:600px;">
+        <img src="{% static 'homecenter.jpg' %}" style="width:600px;">
+        <h3>Who we are</h3>
+        <p style="text-align:justify;font-family: 'Times New Roman', Times, serif;" align>Since 1995 Home Centre has been in the business of making homes beautiful. What started with a single store in Sharjah, UAE, is today the region’s preferred home shopping destination committed to constantly delivering outstanding value, continuous innovation and exceptional customer experience.
+
+<br>
+<BR>
+A leading home retailer in the Middle East, North Africa and the Indian subcontinent, Home Centre offers an extensive and impressive range of furniture, home furnishings, home accessories, bed & bath and kitchenware.
+            <br>Home Centre’s in-house team of stylists and buyers draw inspiration from global trends to bring stylish and affordable furniture and home furnishing to a wide spectrum of homes from traditional to modern.
+
+<br><BR>
+
+Home Centre has consistently ranked among the top 50 brands in the Middle East Global Brand Simplicity Index. Home Centre has also been conferred the Superbrand status for three years in a row in the UAE (2010-12), Kuwait (2010) and in Jordan (2012) as well.
+        <BR>    <br>
+            Home Centre India won the Global Innovation Awards for 2014-2015 and has also been awarded the IMAGES Most Admired Retailer of the Year: for the Home & Office Improvement category at the 11th Images Retail Awards in 2014.
+        </p>
+    </div>
+</div>
+</body>
+</html>

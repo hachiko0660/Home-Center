@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: darkgrey;
+}
+
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+        <div class="container" style="background-color:grey;height:50px;">
+          <a class="navbar-brand" href="#" style="font-size:35px;color:rgb(92, 43, 43);">
+            homecenter <img src="{% static 'home.jpg' %}" alt="" width="30" height="30" class="d-inline-block align-text-right"></a>
+
+           <a href="http://127.0.0.1:8000/ecom/regi/" ><button style="border-color: rgb(237, 237, 237);border-radius:7px;margin-left:600px;width:90px;color:rgb(92, 43, 43);">Register</button> </a>&nbsp;&nbsp;
+            <a href="http://127.0.0.1:8000/ecom/log/"><button  style="border-color: rgb(237, 237, 237);border-radius:7px;width:90px;color:rgb(92, 43, 43);">Login</button></a>&nbsp;&nbsp;
+<!--&lt;!&ndash;            <a href="http://127.0.0.1:8000/ecom/proj/"><button  style="border-color: rgb(237, 237, 237);border-radius:7px;">Home</button></a>&ndash;&gt;-->
+<!--            <a href="http://127.0.0.1:8000/ecom/proj/"><button  style="border-color: rgb(237, 237, 237);border-radius:7px;">About</button></a>-->
+            <a href="http://127.0.0.1:8000/ecom/admnlog/"><button  style="border-color: rgb(237, 237, 237);border-radius:7px;width:90px;color:rgb(92, 43, 43);">Admin</button></a>
+<!--&lt;!&ndash;            <a href="http://127.0.0.1:8000/ecom/logout/"><button  style="border-color: rgb(237, 237, 237);border-radius:7px;background-image:linear-gradient(to right, #CC95C0 0%, #DBD4B4  51%, #CC95C0  100%);">Logout</button></a>&ndash;&gt;-->
+        </div>
+      </nav>
+
+<div align="center" class="container">
+    <img src="{% static 'hm3.jpg' %}" style="width:100%;height:500px;">
+     <div class="centered" style="font-size:55px;">Homecenter</div>
+</div>
+</body>
+</html>

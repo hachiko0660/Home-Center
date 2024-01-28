@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body{
+    background-image:url({% static 'back.jpg' %});
+    background-size:100% 750px;
+    }
+    td{
+    color:white;
+    }
+</style>
+<body>
+
+  <form method="post">{% csrf_token %}
+    <table  align="right" style="height:300px;width:300px;border: 3px solid black;">
+
+
+
+        <h1 align="right">User Profile</h1>
+
+        <tr>
+            <td style="font-size:25px;font-family: 'Times New Roman', Times, serif;">
+                Username: </td>
+                <td style="font-size:25px;">{{a.uname}}
+            </td></tr>
+            <tr>
+            <td style="font-size:25px;font-family: 'Times New Roman', Times, serif;">
+                Email: </td>
+                <td style="font-size:25px;">{{a.email}}
+            </td>
+    </tr>
+            <tr><td style="font-size:25px;font-family: 'Times New Roman', Times, serif;">
+                Phone number:</td>
+                <td style="font-size:25px;">{{a.phn}}
+            </td>
+            </tr>
+        <tr>
+            <td>
+                <button><a href="http://127.0.0.1:8000/ecom/useredit/{{a.id}}">Edit</a></button>
+            </td>
+            <td>
+                <button>Logout</button>
+            </td>
+        </tr>
+
+    </table>
+
+      </div>
+  </form>
+
+</body>
+</html>
